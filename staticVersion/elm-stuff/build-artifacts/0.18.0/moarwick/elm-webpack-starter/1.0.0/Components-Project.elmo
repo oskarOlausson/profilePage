@@ -1,0 +1,66 @@
+var _moarwick$elm_webpack_starter$Components_Project$format = function (folderName) {
+	return _elm_lang$core$String$isEmpty(folderName) ? '' : ((!A2(_elm_lang$core$String$endsWith, '/', folderName)) ? A2(_elm_lang$core$Basics_ops['++'], folderName, '/') : folderName);
+};
+var _moarwick$elm_webpack_starter$Components_Project$loadImages = F2(
+	function (folder, imageNames) {
+		return A2(
+			_elm_lang$core$List$map,
+			function (x) {
+				return A2(
+					_elm_lang$core$Basics_ops['++'],
+					_moarwick$elm_webpack_starter$Components_Project$format(folder),
+					x);
+			},
+			imageNames);
+	});
+var _moarwick$elm_webpack_starter$Components_Project$loadImage = F2(
+	function (folder, imgName) {
+		return A2(
+			_elm_lang$core$Basics_ops['++'],
+			'static/img/',
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				_moarwick$elm_webpack_starter$Components_Project$format(folder),
+				A2(_elm_lang$core$Basics_ops['++'], imgName, '.png')));
+	});
+var _moarwick$elm_webpack_starter$Components_Project$Project = F3(
+	function (a, b, c) {
+		return {title: a, imagePath: b, contents: c};
+	});
+var _moarwick$elm_webpack_starter$Components_Project$ImageWithText = F2(
+	function (a, b) {
+		return {ctor: 'ImageWithText', _0: a, _1: b};
+	});
+var _moarwick$elm_webpack_starter$Components_Project$Text = function (a) {
+	return {ctor: 'Text', _0: a};
+};
+var _moarwick$elm_webpack_starter$Components_Project$Image = function (a) {
+	return {ctor: 'Image', _0: a};
+};
+var _moarwick$elm_webpack_starter$Components_Project$fixImages = F2(
+	function (folder, content) {
+		var _p0 = content;
+		switch (_p0.ctor) {
+			case 'Text':
+				return content;
+			case 'Image':
+				return _moarwick$elm_webpack_starter$Components_Project$Image(
+					A2(_moarwick$elm_webpack_starter$Components_Project$loadImage, folder, _p0._0));
+			default:
+				return A2(
+					_moarwick$elm_webpack_starter$Components_Project$ImageWithText,
+					A2(_moarwick$elm_webpack_starter$Components_Project$loadImage, folder, _p0._0),
+					_p0._1);
+		}
+	});
+var _moarwick$elm_webpack_starter$Components_Project$projectPicture = F4(
+	function (title, folder, image, contents) {
+		return A3(
+			_moarwick$elm_webpack_starter$Components_Project$Project,
+			title,
+			A2(_moarwick$elm_webpack_starter$Components_Project$loadImage, folder, image),
+			A2(
+				_elm_lang$core$List$map,
+				_moarwick$elm_webpack_starter$Components_Project$fixImages(folder),
+				contents));
+	});

@@ -1,0 +1,167 @@
+var _tortus$elm_array_2d$Array2D$indexedMap = F2(
+	function (fn, array2d) {
+		var mappedData = A2(
+			_elm_lang$core$Array$indexedMap,
+			F2(
+				function (row, rowAry) {
+					return A2(
+						_elm_lang$core$Array$indexedMap,
+						F2(
+							function (col, value) {
+								return A3(fn, row, col, value);
+							}),
+						rowAry);
+				}),
+			array2d.data);
+		return _elm_lang$core$Native_Utils.update(
+			array2d,
+			{data: mappedData});
+	});
+var _tortus$elm_array_2d$Array2D$map = F2(
+	function (fn, array2d) {
+		return A2(
+			_tortus$elm_array_2d$Array2D$indexedMap,
+			F3(
+				function (_p1, _p0, val) {
+					return fn(val);
+				}),
+			array2d);
+	});
+var _tortus$elm_array_2d$Array2D$deleteColumn = F2(
+	function (index, array2d) {
+		var newData = A2(
+			_elm_lang$core$Array$map,
+			_tortus$elm_array_2d$Array2D_ArrayHelpers$deleteArrayElt(index),
+			array2d.data);
+		var newColumns = A2(
+			_elm_lang$core$Maybe$withDefault,
+			0,
+			A2(
+				_elm_lang$core$Maybe$map,
+				_elm_lang$core$Array$length,
+				A2(_elm_lang$core$Array$get, 0, newData)));
+		return _elm_lang$core$Native_Utils.update(
+			array2d,
+			{data: newData, columns: newColumns});
+	});
+var _tortus$elm_array_2d$Array2D$deleteRow = F2(
+	function (index, array2d) {
+		return _elm_lang$core$Native_Utils.update(
+			array2d,
+			{
+				data: A2(_tortus$elm_array_2d$Array2D_ArrayHelpers$deleteArrayElt, index, array2d.data)
+			});
+	});
+var _tortus$elm_array_2d$Array2D$appendColumn = F3(
+	function (column, filler, array2d) {
+		var newData = A2(
+			_elm_lang$core$Array$indexedMap,
+			F2(
+				function (index, row) {
+					var newCell = A2(
+						_elm_lang$core$Maybe$withDefault,
+						filler,
+						A2(_elm_lang$core$Array$get, index, column));
+					return A2(_elm_lang$core$Array$push, newCell, row);
+				}),
+			array2d.data);
+		return _elm_lang$core$Native_Utils.update(
+			array2d,
+			{data: newData, columns: array2d.columns + 1});
+	});
+var _tortus$elm_array_2d$Array2D$appendRow = F3(
+	function (row, filler, array2d) {
+		var normalizedRow = A3(_tortus$elm_array_2d$Array2D_ArrayHelpers$normalize, array2d.columns, filler, row);
+		var newRows = A2(_elm_lang$core$Array$push, normalizedRow, array2d.data);
+		return _elm_lang$core$Native_Utils.update(
+			array2d,
+			{data: newRows});
+	});
+var _tortus$elm_array_2d$Array2D$getColumn = F2(
+	function (column, array2d) {
+		return A2(
+			_elm_lang$core$Array$map,
+			function (rowArray) {
+				return A2(_elm_lang$core$Array$get, column, rowArray);
+			},
+			array2d.data);
+	});
+var _tortus$elm_array_2d$Array2D$getRow = F2(
+	function (row, array2d) {
+		return A2(_elm_lang$core$Array$get, row, array2d.data);
+	});
+var _tortus$elm_array_2d$Array2D$get = F3(
+	function (row, col, array2d) {
+		return A2(
+			_elm_lang$core$Maybe$andThen,
+			_elm_lang$core$Array$get(col),
+			A2(_tortus$elm_array_2d$Array2D$getRow, row, array2d));
+	});
+var _tortus$elm_array_2d$Array2D$set = F4(
+	function (row, col, newValue, array2d) {
+		return A2(
+			_elm_lang$core$Maybe$withDefault,
+			array2d,
+			A2(
+				_elm_lang$core$Maybe$map,
+				function (rowAry) {
+					return _elm_lang$core$Native_Utils.update(
+						array2d,
+						{
+							data: A3(
+								_elm_lang$core$Array$set,
+								row,
+								A3(_elm_lang$core$Array$set, col, newValue, rowAry),
+								array2d.data)
+						});
+				},
+				A2(_tortus$elm_array_2d$Array2D$getRow, row, array2d)));
+	});
+var _tortus$elm_array_2d$Array2D$isEmpty = function (array2d) {
+	return _elm_lang$core$Array$isEmpty(array2d.data);
+};
+var _tortus$elm_array_2d$Array2D$columns = function (array2d) {
+	return array2d.columns;
+};
+var _tortus$elm_array_2d$Array2D$rows = function (array2d) {
+	return _elm_lang$core$Array$length(array2d.data);
+};
+var _tortus$elm_array_2d$Array2D$repeat = F3(
+	function (numRows, numColumns, e) {
+		var row = A2(_elm_lang$core$Array$repeat, numColumns, e);
+		return {
+			data: A2(_elm_lang$core$Array$repeat, numRows, row),
+			columns: numColumns
+		};
+	});
+var _tortus$elm_array_2d$Array2D$initialize = F3(
+	function (numRows, numColumns, f) {
+		var rows = A2(
+			_elm_lang$core$Array$initialize,
+			numRows,
+			function (row) {
+				return A2(
+					_elm_lang$core$Array$initialize,
+					numColumns,
+					function (col) {
+						return A2(f, row, col);
+					});
+			});
+		return {data: rows, columns: numColumns};
+	});
+var _tortus$elm_array_2d$Array2D$fromArray = function (array) {
+	var _p2 = _tortus$elm_array_2d$Array2D_ArrayHelpers$getMinColumnsAndTruncateRows(array);
+	var columns = _p2._0;
+	var normalizedData = _p2._1;
+	return {data: normalizedData, columns: columns};
+};
+var _tortus$elm_array_2d$Array2D$fromList = function (list) {
+	return _tortus$elm_array_2d$Array2D$fromArray(
+		_elm_lang$core$Array$fromList(
+			A2(_elm_lang$core$List$map, _elm_lang$core$Array$fromList, list)));
+};
+var _tortus$elm_array_2d$Array2D$empty = {data: _elm_lang$core$Array$empty, columns: 0};
+var _tortus$elm_array_2d$Array2D$Array2D = F2(
+	function (a, b) {
+		return {data: a, columns: b};
+	});

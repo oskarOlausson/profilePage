@@ -1,0 +1,13 @@
+var _tortus$elm_array_2d$Array2D_Json$decoder = function (cellDecoder) {
+	return A2(
+		_elm_lang$core$Json_Decode$andThen,
+		function (array) {
+			var _p0 = _tortus$elm_array_2d$Array2D_ArrayHelpers$getMinColumnsAndTruncateRows(array);
+			var columns = _p0._0;
+			var normalizedData = _p0._1;
+			return _elm_lang$core$Json_Decode$succeed(
+				{data: normalizedData, columns: columns});
+		},
+		_elm_lang$core$Json_Decode$array(
+			_elm_lang$core$Json_Decode$array(cellDecoder)));
+};

@@ -1,0 +1,31 @@
+var _moarwick$elm_webpack_starter$Components_UpdateMessages$ProjectCell = F2(
+	function (a, b) {
+		return {project: a, style: b};
+	});
+var _moarwick$elm_webpack_starter$Components_UpdateMessages$ProfilePic = F3(
+	function (a, b, c) {
+		return {style: a, mode: b, textStyle: c};
+	});
+var _moarwick$elm_webpack_starter$Components_UpdateMessages$ProfileAnimationDone = function (a) {
+	return {ctor: 'ProfileAnimationDone', _0: a};
+};
+var _moarwick$elm_webpack_starter$Components_UpdateMessages$ProfileClick = {ctor: 'ProfileClick'};
+var _moarwick$elm_webpack_starter$Components_UpdateMessages$HoverOff = function (a) {
+	return {ctor: 'HoverOff', _0: a};
+};
+var _moarwick$elm_webpack_starter$Components_UpdateMessages$HoverOn = function (a) {
+	return {ctor: 'HoverOn', _0: a};
+};
+var _moarwick$elm_webpack_starter$Components_UpdateMessages$BringOutText = {ctor: 'BringOutText'};
+var _moarwick$elm_webpack_starter$Components_UpdateMessages$Animate = function (a) {
+	return {ctor: 'Animate', _0: a};
+};
+var _moarwick$elm_webpack_starter$Components_UpdateMessages$ToggleDetailed = function (a) {
+	return {ctor: 'ToggleDetailed', _0: a};
+};
+var _moarwick$elm_webpack_starter$Components_UpdateMessages$NoOp = {ctor: 'NoOp'};
+var _moarwick$elm_webpack_starter$Components_UpdateMessages$ProfileHover = {ctor: 'ProfileHover'};
+var _moarwick$elm_webpack_starter$Components_UpdateMessages$ProjectHover = {ctor: 'ProjectHover'};
+var _moarwick$elm_webpack_starter$Components_UpdateMessages$Done = {ctor: 'Done'};
+var _moarwick$elm_webpack_starter$Components_UpdateMessages$Animating = {ctor: 'Animating'};
+var _moarwick$elm_webpack_starter$Components_UpdateMessages$Off = {ctor: 'Off'};

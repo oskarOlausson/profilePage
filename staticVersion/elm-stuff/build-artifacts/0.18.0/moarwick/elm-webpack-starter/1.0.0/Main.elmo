@@ -1,0 +1,881 @@
+var _moarwick$elm_webpack_starter$Main$getImage = function (image) {
+	return A2(
+		_elm_lang$html$Html$img,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('projectImage'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$src(image),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$alt('error'),
+					_1: {ctor: '[]'}
+				}
+			}
+		},
+		{ctor: '[]'});
+};
+var _moarwick$elm_webpack_starter$Main$renderAContent = function (content) {
+	var _p0 = content;
+	switch (_p0.ctor) {
+		case 'Image':
+			return A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('contentImageWrapper'),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$img,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('contentImage'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$src(_p0._0),
+								_1: {ctor: '[]'}
+							}
+						},
+						{ctor: '[]'}),
+					_1: {ctor: '[]'}
+				});
+		case 'ImageWithText':
+			return A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('contentImageWrapper'),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$img,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('contentImage'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$src(_p0._0),
+								_1: {ctor: '[]'}
+							}
+						},
+						{ctor: '[]'}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_evancz$elm_markdown$Markdown$toHtml,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('smallText'),
+								_1: {ctor: '[]'}
+							},
+							_p0._1),
+						_1: {ctor: '[]'}
+					}
+				});
+		default:
+			return A2(
+				_elm_lang$html$Html$div,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: A2(
+						_evancz$elm_markdown$Markdown$toHtml,
+						{ctor: '[]'},
+						_p0._0),
+					_1: {ctor: '[]'}
+				});
+	}
+};
+var _moarwick$elm_webpack_starter$Main$renderContents = function (contents) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$id('contentList'),
+			_1: {ctor: '[]'}
+		},
+		A2(_elm_lang$core$List$map, _moarwick$elm_webpack_starter$Main$renderAContent, contents));
+};
+var _moarwick$elm_webpack_starter$Main$projectText = function (model) {
+	var _p1 = model.state;
+	if (_p1.ctor === 'DetailedView') {
+		var _p2 = _p1._0;
+		return A2(
+			_elm_lang$html$Html$div,
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('projectTextBox'),
+					_1: {ctor: '[]'}
+				},
+				_mdgriffith$elm_style_animation$Animation$render(model.textStyle)),
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('projectMainText'),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$h1,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text(_p2.project.title),
+								_1: {ctor: '[]'}
+							}),
+						_1: {
+							ctor: '::',
+							_0: _moarwick$elm_webpack_starter$Main$renderContents(_p2.project.contents),
+							_1: {ctor: '[]'}
+						}
+					}),
+				_1: {ctor: '[]'}
+			});
+	} else {
+		return A2(
+			_elm_lang$html$Html$div,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('projectTextBox'),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						_mdgriffith$elm_style_animation$Animation$render(model.textStyle),
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('projectMainText'),
+							_1: {ctor: '[]'}
+						}),
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$h1,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text(''),
+								_1: {ctor: '[]'}
+							}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$b,
+								{ctor: '[]'},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text(''),
+									_1: {ctor: '[]'}
+								}),
+							_1: {ctor: '[]'}
+						}
+					}),
+				_1: {ctor: '[]'}
+			});
+	}
+};
+var _moarwick$elm_webpack_starter$Main$getText = function (state) {
+	var _p3 = state;
+	if (_p3.ctor === 'ProjectView') {
+		return 'My Projects';
+	} else {
+		return _p3._0.project.title;
+	}
+};
+var _moarwick$elm_webpack_starter$Main$isInDetailedMode = function (model) {
+	var _p4 = model.state;
+	if (_p4.ctor === 'DetailedView') {
+		return true;
+	} else {
+		return false;
+	}
+};
+var _moarwick$elm_webpack_starter$Main$drawProject = F2(
+	function (model, cell) {
+		var hovering = {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Events$onMouseEnter(
+				_moarwick$elm_webpack_starter$Components_UpdateMessages$HoverOn(_moarwick$elm_webpack_starter$Components_UpdateMessages$ProjectHover)),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Events$onMouseOut(
+					_moarwick$elm_webpack_starter$Components_UpdateMessages$HoverOff(_moarwick$elm_webpack_starter$Components_UpdateMessages$ProjectHover)),
+				_1: {ctor: '[]'}
+			}
+		};
+		var textDiv = _moarwick$elm_webpack_starter$Main$projectText(model);
+		var closeButtonStyle = _mdgriffith$elm_style_animation$Animation$render(model.closeButtonStyle);
+		var closeButton = A2(
+			_elm_lang$html$Html$img,
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				closeButtonStyle,
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('closeButton'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$src('static/img/closeButton.svg'),
+							_1: {ctor: '[]'}
+						}
+					},
+					hovering)),
+			{ctor: '[]'});
+		var style = _mdgriffith$elm_style_animation$Animation$render(cell.style);
+		var start = A2(
+			_elm_lang$core$Basics_ops['++'],
+			style,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$classList(
+					{
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'project', _1: true},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'projectInList',
+								_1: !_moarwick$elm_webpack_starter$Main$isInDetailedMode(model)
+							},
+							_1: {ctor: '[]'}
+						}
+					}),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$html$Html_Events$onClick(
+						_moarwick$elm_webpack_starter$Components_UpdateMessages$ToggleDetailed(cell)),
+					_1: {ctor: '[]'}
+				}
+			});
+		var project = cell.project;
+		var _p5 = model.state;
+		if (_p5.ctor === 'ProjectView') {
+			return A2(
+				_elm_lang$html$Html$div,
+				start,
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('projectTitle'),
+							_1: {ctor: '[]'}
+						},
+						{ctor: '[]'}),
+					_1: {
+						ctor: '::',
+						_0: _moarwick$elm_webpack_starter$Main$getImage(project.imagePath),
+						_1: {ctor: '[]'}
+					}
+				});
+		} else {
+			return _elm_lang$core$Native_Utils.eq(_p5._0.project, cell.project) ? A2(
+				_elm_lang$html$Html$div,
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('chosenProject'),
+						_1: {ctor: '[]'}
+					},
+					start),
+				{
+					ctor: '::',
+					_0: closeButton,
+					_1: {
+						ctor: '::',
+						_0: _moarwick$elm_webpack_starter$Main$getImage(project.imagePath),
+						_1: {
+							ctor: '::',
+							_0: textDiv,
+							_1: {ctor: '[]'}
+						}
+					}
+				}) : A2(
+				_elm_lang$html$Html$div,
+				start,
+				{
+					ctor: '::',
+					_0: _moarwick$elm_webpack_starter$Main$getImage(project.imagePath),
+					_1: {ctor: '[]'}
+				});
+		}
+	});
+var _moarwick$elm_webpack_starter$Main$projectRoute = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('projectView'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('projectsTitle'),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(
+						_moarwick$elm_webpack_starter$Main$getText(model.state)),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('projects'),
+						_1: {ctor: '[]'}
+					},
+					A2(
+						_elm_lang$core$List$map,
+						_moarwick$elm_webpack_starter$Main$drawProject(model),
+						model.list)),
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _moarwick$elm_webpack_starter$Main$getProfileHoverInteraction = function (mode) {
+	var _p6 = mode;
+	if (_p6.ctor === 'Off') {
+		return {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Events$onMouseEnter(
+				_moarwick$elm_webpack_starter$Components_UpdateMessages$HoverOn(_moarwick$elm_webpack_starter$Components_UpdateMessages$ProfileHover)),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Events$onMouseOut(
+					_moarwick$elm_webpack_starter$Components_UpdateMessages$HoverOff(_moarwick$elm_webpack_starter$Components_UpdateMessages$ProfileHover)),
+				_1: {ctor: '[]'}
+			}
+		};
+	} else {
+		return {ctor: '[]'};
+	}
+};
+var _moarwick$elm_webpack_starter$Main$profileRoute = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$id('profileRoute'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$img,
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$id('profilePic'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$src('static/img/meSquare.jpg'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Events$onClick(_moarwick$elm_webpack_starter$Components_UpdateMessages$ProfileClick),
+								_1: {ctor: '[]'}
+							}
+						}
+					},
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						_mdgriffith$elm_style_animation$Animation$render(model.profilePic.style),
+						_moarwick$elm_webpack_starter$Main$getProfileHoverInteraction(model.profilePic.mode))),
+				{ctor: '[]'}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						_mdgriffith$elm_style_animation$Animation$render(model.profilePic.textStyle),
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$id('whatIDo'),
+							_1: {ctor: '[]'}
+						}),
+					{
+						ctor: '::',
+						_0: A2(
+							_evancz$elm_markdown$Markdown$toHtml,
+							{ctor: '[]'},
+							_moarwick$elm_webpack_starter$Components_Content$profileText),
+						_1: {ctor: '[]'}
+					}),
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _moarwick$elm_webpack_starter$Main$background = A2(
+	_elm_lang$html$Html$div,
+	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_lang$html$Html$img,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$id('background'),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$src('static/img/background.jpg'),
+					_1: {ctor: '[]'}
+				}
+			},
+			{ctor: '[]'}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$id('backgroundSlate'),
+					_1: {ctor: '[]'}
+				},
+				{ctor: '[]'}),
+			_1: {ctor: '[]'}
+		}
+	});
+var _moarwick$elm_webpack_starter$Main$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('all'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$id('myText'),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$id('myName'),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('Oskar Olausson'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$div,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$id('myMail'),
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text('oskar.erik.olausson@gmail.com'),
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}),
+			_1: {
+				ctor: '::',
+				_0: _moarwick$elm_webpack_starter$Main$profileRoute(model),
+				_1: {
+					ctor: '::',
+					_0: _moarwick$elm_webpack_starter$Main$projectRoute(model),
+					_1: {ctor: '[]'}
+				}
+			}
+		});
+};
+var _moarwick$elm_webpack_starter$Main$getAnimation = function (cell) {
+	return cell.style;
+};
+var _moarwick$elm_webpack_starter$Main$getAnimations = function (cell) {
+	return A2(_elm_lang$core$List$map, _moarwick$elm_webpack_starter$Main$getAnimation, cell);
+};
+var _moarwick$elm_webpack_starter$Main$subscriptions = function (model) {
+	return A2(
+		_mdgriffith$elm_style_animation$Animation$subscription,
+		_moarwick$elm_webpack_starter$Components_UpdateMessages$Animate,
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			A2(_elm_lang$core$List$map, _moarwick$elm_webpack_starter$Main$getAnimation, model.list),
+			{
+				ctor: '::',
+				_0: model.textStyle,
+				_1: {
+					ctor: '::',
+					_0: model.closeButtonStyle,
+					_1: {
+						ctor: '::',
+						_0: model.profilePic.style,
+						_1: {
+							ctor: '::',
+							_0: model.profilePic.textStyle,
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}));
+};
+var _moarwick$elm_webpack_starter$Main$animateToProject = function (cell) {
+	return _elm_lang$core$Native_Utils.update(
+		cell,
+		{
+			style: _moarwick$elm_webpack_starter$AnimationHelper$projectNormalSize(cell.style)
+		});
+};
+var _moarwick$elm_webpack_starter$Main$animateToDetailed = F2(
+	function (targetProject, cell) {
+		return _elm_lang$core$Native_Utils.eq(cell.project, targetProject) ? _elm_lang$core$Native_Utils.update(
+			cell,
+			{
+				style: _moarwick$elm_webpack_starter$AnimationHelper$projectBigSize(cell.style)
+			}) : _elm_lang$core$Native_Utils.update(
+			cell,
+			{
+				style: _moarwick$elm_webpack_starter$AnimationHelper$projectNothingSize(cell.style)
+			});
+	});
+var _moarwick$elm_webpack_starter$Main$onStyle = F2(
+	function (animMsg, cell) {
+		var _p7 = A2(_mdgriffith$elm_style_animation$Animation_Messenger$update, animMsg, cell.style);
+		var style = _p7._0;
+		var cmd = _p7._1;
+		return {
+			ctor: '_Tuple2',
+			_0: _elm_lang$core$Native_Utils.update(
+				cell,
+				{style: style}),
+			_1: cmd
+		};
+	});
+var _moarwick$elm_webpack_starter$Main$delay = 120;
+var _moarwick$elm_webpack_starter$Main$expandProfile = function (pp) {
+	return _elm_lang$core$Native_Utils.update(
+		pp,
+		{
+			style: _moarwick$elm_webpack_starter$AnimationHelper$profilePicExpanded(pp.style),
+			mode: _moarwick$elm_webpack_starter$Components_UpdateMessages$Animating,
+			textStyle: A2(_moarwick$elm_webpack_starter$AnimationHelper$profileTextAppear, _moarwick$elm_webpack_starter$Main$delay, pp.textStyle)
+		});
+};
+var _moarwick$elm_webpack_starter$Main$deExpandProfile = function (pp) {
+	return _elm_lang$core$Native_Utils.update(
+		pp,
+		{
+			mode: _moarwick$elm_webpack_starter$Components_UpdateMessages$Animating,
+			style: A2(_moarwick$elm_webpack_starter$AnimationHelper$profilePicNormal, _moarwick$elm_webpack_starter$Main$delay, pp.style),
+			textStyle: _moarwick$elm_webpack_starter$AnimationHelper$profileTextDisappear(pp.textStyle)
+		});
+};
+var _moarwick$elm_webpack_starter$Main$startProfileAnimation = function (model) {
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				profilePic: _moarwick$elm_webpack_starter$Main$expandProfile(model.profilePic)
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _moarwick$elm_webpack_starter$Main$startList = {
+	ctor: '::',
+	_0: _moarwick$elm_webpack_starter$Components_Content$hiki,
+	_1: {
+		ctor: '::',
+		_0: _moarwick$elm_webpack_starter$Components_Content$sportswik,
+		_1: {
+			ctor: '::',
+			_0: _moarwick$elm_webpack_starter$Components_Content$faces,
+			_1: {ctor: '[]'}
+		}
+	}
+};
+var _moarwick$elm_webpack_starter$Main$convertToCell = function (project) {
+	return A2(_moarwick$elm_webpack_starter$Components_UpdateMessages$ProjectCell, project, _moarwick$elm_webpack_starter$AnimationHelper$startStyle);
+};
+var _moarwick$elm_webpack_starter$Main$initPP = {style: _moarwick$elm_webpack_starter$AnimationHelper$profilePicStartStyle, mode: _moarwick$elm_webpack_starter$Components_UpdateMessages$Off, textStyle: _moarwick$elm_webpack_starter$AnimationHelper$profileTextStart};
+var _moarwick$elm_webpack_starter$Main$Model = F5(
+	function (a, b, c, d, e) {
+		return {state: a, list: b, textStyle: c, closeButtonStyle: d, profilePic: e};
+	});
+var _moarwick$elm_webpack_starter$Main$DetailedView = function (a) {
+	return {ctor: 'DetailedView', _0: a};
+};
+var _moarwick$elm_webpack_starter$Main$toDetailedView = F2(
+	function (model, cell) {
+		var profilePic = model.profilePic;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				state: _moarwick$elm_webpack_starter$Main$DetailedView(cell),
+				list: A2(
+					_elm_lang$core$List$map,
+					_moarwick$elm_webpack_starter$Main$animateToDetailed(cell.project),
+					model.list),
+				profilePic: _elm_lang$core$Native_Utils.update(
+					profilePic,
+					{
+						style: _moarwick$elm_webpack_starter$AnimationHelper$profilePicHidden(profilePic.style),
+						textStyle: _moarwick$elm_webpack_starter$AnimationHelper$profileTextFastGone(profilePic.textStyle),
+						mode: _moarwick$elm_webpack_starter$Components_UpdateMessages$Off
+					})
+			});
+	});
+var _moarwick$elm_webpack_starter$Main$ProjectView = {ctor: 'ProjectView'};
+var _moarwick$elm_webpack_starter$Main$init = {
+	ctor: '_Tuple2',
+	_0: A5(
+		_moarwick$elm_webpack_starter$Main$Model,
+		_moarwick$elm_webpack_starter$Main$ProjectView,
+		A2(_elm_lang$core$List$map, _moarwick$elm_webpack_starter$Main$convertToCell, _moarwick$elm_webpack_starter$Main$startList),
+		_moarwick$elm_webpack_starter$AnimationHelper$textStartStyle,
+		_moarwick$elm_webpack_starter$AnimationHelper$closeButtonStartStyle,
+		_moarwick$elm_webpack_starter$Main$initPP),
+	_1: _elm_lang$core$Platform_Cmd$none
+};
+var _moarwick$elm_webpack_starter$Main$toProjectView = function (model) {
+	var profilePic = model.profilePic;
+	return _elm_lang$core$Native_Utils.update(
+		model,
+		{
+			state: _moarwick$elm_webpack_starter$Main$ProjectView,
+			list: A2(_elm_lang$core$List$map, _moarwick$elm_webpack_starter$Main$animateToProject, model.list),
+			textStyle: _moarwick$elm_webpack_starter$AnimationHelper$textToHidden(model.textStyle),
+			closeButtonStyle: _moarwick$elm_webpack_starter$AnimationHelper$closeButtonHidden(model.closeButtonStyle),
+			profilePic: _elm_lang$core$Native_Utils.update(
+				profilePic,
+				{
+					style: A2(_moarwick$elm_webpack_starter$AnimationHelper$profilePicNormal, 0, profilePic.style)
+				})
+		});
+};
+var _moarwick$elm_webpack_starter$Main$update = F2(
+	function (msg, model) {
+		var _p8 = msg;
+		switch (_p8.ctor) {
+			case 'NoOp':
+				return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+			case 'ToggleDetailed':
+				var _p9 = model.state;
+				if (_p9.ctor === 'DetailedView') {
+					return {
+						ctor: '_Tuple2',
+						_0: _moarwick$elm_webpack_starter$Main$toProjectView(model),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					return {
+						ctor: '_Tuple2',
+						_0: A2(_moarwick$elm_webpack_starter$Main$toDetailedView, model, _p8._0),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			case 'BringOutText':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							textStyle: _moarwick$elm_webpack_starter$AnimationHelper$textToVisible(model.textStyle),
+							closeButtonStyle: _moarwick$elm_webpack_starter$AnimationHelper$closeButtonNormal(model.closeButtonStyle)
+						}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'Animate':
+				var _p18 = _p8._0;
+				var profilePic = model.profilePic;
+				var _p10 = A2(_mdgriffith$elm_style_animation$Animation_Messenger$update, _p18, model.profilePic.textStyle);
+				var pptStyle = _p10._0;
+				var pptMsg = _p10._1;
+				var _p11 = A2(_mdgriffith$elm_style_animation$Animation_Messenger$update, _p18, model.profilePic.style);
+				var ppStyle = _p11._0;
+				var ppMsg = _p11._1;
+				var _p12 = A2(_mdgriffith$elm_style_animation$Animation_Messenger$update, _p18, model.closeButtonStyle);
+				var newCloseStyle = _p12._0;
+				var closeMsg = _p12._1;
+				var _p13 = A2(_mdgriffith$elm_style_animation$Animation_Messenger$update, _p18, model.textStyle);
+				var newTextStyle = _p13._0;
+				var textMsg = _p13._1;
+				var listAndCmd = A2(
+					_elm_lang$core$List$map,
+					_moarwick$elm_webpack_starter$Main$onStyle(_p18),
+					model.list);
+				var newStyles = A2(
+					_elm_lang$core$List$map,
+					function (_p14) {
+						var _p15 = _p14;
+						return _p15._0;
+					},
+					listAndCmd);
+				var newCmds = A2(
+					_elm_lang$core$List$map,
+					function (_p16) {
+						var _p17 = _p16;
+						return _p17._1;
+					},
+					listAndCmd);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							list: newStyles,
+							textStyle: newTextStyle,
+							closeButtonStyle: newCloseStyle,
+							profilePic: _elm_lang$core$Native_Utils.update(
+								profilePic,
+								{style: ppStyle, textStyle: pptStyle})
+						}),
+					_1: _elm_lang$core$Platform_Cmd$batch(
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							newCmds,
+							{
+								ctor: '::',
+								_0: textMsg,
+								_1: {
+									ctor: '::',
+									_0: closeMsg,
+									_1: {
+										ctor: '::',
+										_0: ppMsg,
+										_1: {
+											ctor: '::',
+											_0: pptMsg,
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}))
+				};
+			case 'HoverOn':
+				var _p19 = _p8._0;
+				if (_p19.ctor === 'ProjectHover') {
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{
+								closeButtonStyle: _moarwick$elm_webpack_starter$AnimationHelper$closeButtonHover(model.closeButtonStyle)
+							}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					var profilePic = model.profilePic;
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{
+								profilePic: _elm_lang$core$Native_Utils.update(
+									profilePic,
+									{
+										style: _moarwick$elm_webpack_starter$AnimationHelper$profilePicHover(profilePic.style)
+									})
+							}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			case 'HoverOff':
+				var _p20 = _p8._0;
+				if (_p20.ctor === 'ProjectHover') {
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{
+								closeButtonStyle: _moarwick$elm_webpack_starter$AnimationHelper$closeButtonNormal(model.closeButtonStyle)
+							}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					var profilePic = model.profilePic;
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{
+								profilePic: _elm_lang$core$Native_Utils.update(
+									profilePic,
+									{
+										style: _moarwick$elm_webpack_starter$AnimationHelper$profilePicNoHover(profilePic.style)
+									})
+							}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			case 'ProfileClick':
+				var _p21 = model.profilePic.mode;
+				switch (_p21.ctor) {
+					case 'Off':
+						return _moarwick$elm_webpack_starter$Main$startProfileAnimation(model);
+					case 'Animating':
+						return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+					default:
+						return {
+							ctor: '_Tuple2',
+							_0: _elm_lang$core$Native_Utils.update(
+								model,
+								{
+									profilePic: _moarwick$elm_webpack_starter$Main$deExpandProfile(model.profilePic)
+								}),
+							_1: _elm_lang$core$Platform_Cmd$none
+						};
+				}
+			default:
+				var profilePic = model.profilePic;
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							profilePic: _elm_lang$core$Native_Utils.update(
+								profilePic,
+								{mode: _p8._0})
+						}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+		}
+	});
+var _moarwick$elm_webpack_starter$Main$main = _elm_lang$html$Html$program(
+	{init: _moarwick$elm_webpack_starter$Main$init, view: _moarwick$elm_webpack_starter$Main$view, update: _moarwick$elm_webpack_starter$Main$update, subscriptions: _moarwick$elm_webpack_starter$Main$subscriptions})();

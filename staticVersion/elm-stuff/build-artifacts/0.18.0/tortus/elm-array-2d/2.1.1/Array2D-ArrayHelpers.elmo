@@ -1,0 +1,46 @@
+var _tortus$elm_array_2d$Array2D_ArrayHelpers$normalize = F3(
+	function (length, filler, input) {
+		var inputLength = _elm_lang$core$Array$length(input);
+		return (_elm_lang$core$Native_Utils.cmp(inputLength, length) > 0) ? A3(_elm_lang$core$Array$slice, 0, length, input) : ((_elm_lang$core$Native_Utils.cmp(inputLength, length) < 0) ? A2(
+			_elm_lang$core$Array$append,
+			input,
+			A2(_elm_lang$core$Array$repeat, length - inputLength, filler)) : input);
+	});
+var _tortus$elm_array_2d$Array2D_ArrayHelpers$truncateRows = F2(
+	function (columns, array) {
+		return A2(
+			_elm_lang$core$Array$map,
+			function (row) {
+				return (_elm_lang$core$Native_Utils.cmp(
+					_elm_lang$core$Array$length(row),
+					columns) > 0) ? A3(_elm_lang$core$Array$slice, 0, columns, row) : row;
+			},
+			array);
+	});
+var _tortus$elm_array_2d$Array2D_ArrayHelpers$minRowLength = function (array) {
+	return _elm_lang$core$Array$isEmpty(array) ? 0 : A3(
+		_elm_lang$core$Array$foldl,
+		F2(
+			function (row, min) {
+				var rowLen = _elm_lang$core$Array$length(row);
+				return _elm_lang$core$Native_Utils.eq(min, -1) ? rowLen : ((_elm_lang$core$Native_Utils.cmp(rowLen, min) < 0) ? rowLen : min);
+			}),
+		-1,
+		array);
+};
+var _tortus$elm_array_2d$Array2D_ArrayHelpers$getMinColumnsAndTruncateRows = function (array) {
+	var columns = _tortus$elm_array_2d$Array2D_ArrayHelpers$minRowLength(array);
+	var normalizedData = A2(_tortus$elm_array_2d$Array2D_ArrayHelpers$truncateRows, columns, array);
+	return {ctor: '_Tuple2', _0: columns, _1: normalizedData};
+};
+var _tortus$elm_array_2d$Array2D_ArrayHelpers$deleteArrayElt = F2(
+	function (index, array) {
+		var last = A3(
+			_elm_lang$core$Array$slice,
+			index + 1,
+			_elm_lang$core$Array$length(array),
+			array);
+		var first = A3(_elm_lang$core$Array$slice, 0, index, array);
+		var lastIndex = _elm_lang$core$Array$length(array) - 1;
+		return ((_elm_lang$core$Native_Utils.cmp(index, lastIndex) > 0) || (_elm_lang$core$Native_Utils.cmp(index, 0) < 0)) ? array : A2(_elm_lang$core$Array$append, first, last);
+	});

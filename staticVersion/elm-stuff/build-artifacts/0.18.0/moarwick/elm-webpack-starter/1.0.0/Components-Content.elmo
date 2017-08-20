@@ -1,0 +1,97 @@
+var _moarwick$elm_webpack_starter$Components_Content$profileText = 'Hi, I study Interaction & Design at Umeå University in Sweden.<br/>\nI currently study in my fourth year.<br/><br/>\n    I really enjoy rapid prototyping and algorithm work.\n    If you want to get in touch, my email is at the top of the page.\n        Sincerly, Oskar Olausson.\n';
+var _moarwick$elm_webpack_starter$Components_Content$hiki = A4(
+	_moarwick$elm_webpack_starter$Components_Project$projectPicture,
+	'The Social Game',
+	'hiki',
+	'paper',
+	{
+		ctor: '::',
+		_0: _moarwick$elm_webpack_starter$Components_Project$Text(_moarwick$elm_webpack_starter$Components_MainText$hikiText),
+		_1: {
+			ctor: '::',
+			_0: _moarwick$elm_webpack_starter$Components_Project$Text(''),
+			_1: {
+				ctor: '::',
+				_0: A2(_moarwick$elm_webpack_starter$Components_Project$ImageWithText, 'mat', 'One of the games where four players controlled the red mat together to get it to the gift.'),
+				_1: {
+					ctor: '::',
+					_0: _moarwick$elm_webpack_starter$Components_Project$Text('It was important for us that the game made the players communicate with eachother, so we made controllers with LED-displays so we could give individual players information. And when only one player has information that all need it makes it easier for that player to speak out.'),
+					_1: {
+						ctor: '::',
+						_0: A2(_moarwick$elm_webpack_starter$Components_Project$ImageWithText, 'controller', 'The custom controllers.'),
+						_1: {
+							ctor: '::',
+							_0: _moarwick$elm_webpack_starter$Components_Project$Text('One of these games that used the LED-displays was the club line game.'),
+							_1: {
+								ctor: '::',
+								_0: A2(_moarwick$elm_webpack_starter$Components_Project$ImageWithText, 'club', 'Club line game, one of the games we created.'),
+								_1: {
+									ctor: '::',
+									_0: _moarwick$elm_webpack_starter$Components_Project$Text('This game asks the player to order themselves in the club line, to help them do this they each get a clue on their controller.'),
+									_1: {
+										ctor: '::',
+										_0: _moarwick$elm_webpack_starter$Components_Project$Text('We decided to call the game <span style=\"color:#cc3579\">**GROW**</span>. This project was very stressful but we won two prices at the exhibition at the end so that somewhat makes up for the stressed holidays we had.'),
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	});
+var _moarwick$elm_webpack_starter$Components_Content$voice = A4(
+	_moarwick$elm_webpack_starter$Components_Project$projectPicture,
+	'Siri vs Google',
+	'voice',
+	'siri_google',
+	{
+		ctor: '::',
+		_0: _moarwick$elm_webpack_starter$Components_Project$Text(_moarwick$elm_webpack_starter$Components_MainText$voiceText),
+		_1: {ctor: '[]'}
+	});
+var _moarwick$elm_webpack_starter$Components_Content$sportswik = A4(
+	_moarwick$elm_webpack_starter$Components_Project$projectPicture,
+	'Sportswik',
+	'sportswik',
+	'main',
+	{
+		ctor: '::',
+		_0: _moarwick$elm_webpack_starter$Components_Project$Text(_moarwick$elm_webpack_starter$Components_MainText$sportswikText),
+		_1: {
+			ctor: '::',
+			_0: A2(_moarwick$elm_webpack_starter$Components_Project$ImageWithText, 'plan', 'Early planning work'),
+			_1: {
+				ctor: '::',
+				_0: _moarwick$elm_webpack_starter$Components_Project$Text(_moarwick$elm_webpack_starter$Components_MainText$sportswikText2),
+				_1: {
+					ctor: '::',
+					_0: A2(_moarwick$elm_webpack_starter$Components_Project$ImageWithText, 'workshop', 'Workshop with Sportswiks VD'),
+					_1: {
+						ctor: '::',
+						_0: _moarwick$elm_webpack_starter$Components_Project$Text(_moarwick$elm_webpack_starter$Components_MainText$sportswikText3),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		}
+	});
+var _moarwick$elm_webpack_starter$Components_Content$faces = A4(
+	_moarwick$elm_webpack_starter$Components_Project$projectPicture,
+	'Neural Network',
+	'faces',
+	'emotions43',
+	{
+		ctor: '::',
+		_0: _moarwick$elm_webpack_starter$Components_Project$Text(_moarwick$elm_webpack_starter$Components_MainText$facesText),
+		_1: {
+			ctor: '::',
+			_0: A2(_moarwick$elm_webpack_starter$Components_Project$ImageWithText, 'michevious', 'They were (to make it harder) rotated randomly. (This one is michevious.)'),
+			_1: {
+				ctor: '::',
+				_0: _moarwick$elm_webpack_starter$Components_Project$Text(_moarwick$elm_webpack_starter$Components_MainText$facesText2),
+				_1: {ctor: '[]'}
+			}
+		}
+	});

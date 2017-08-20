@@ -1,0 +1,567 @@
+var _moarwick$elm_webpack_starter$AnimationHelper$projectNothingSize = _mdgriffith$elm_style_animation$Animation$interrupt(
+	{
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$to(
+			{
+				ctor: '::',
+				_0: _mdgriffith$elm_style_animation$Animation$width(
+					_mdgriffith$elm_style_animation$Animation$rem(0)),
+				_1: {
+					ctor: '::',
+					_0: _mdgriffith$elm_style_animation$Animation$height(
+						_mdgriffith$elm_style_animation$Animation$rem(0)),
+					_1: {
+						ctor: '::',
+						_0: _mdgriffith$elm_style_animation$Animation$marginLeft(
+							_mdgriffith$elm_style_animation$Animation$rem(0)),
+						_1: {
+							ctor: '::',
+							_0: _mdgriffith$elm_style_animation$Animation$marginRight(
+								_mdgriffith$elm_style_animation$Animation$rem(0)),
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}),
+		_1: {
+			ctor: '::',
+			_0: _mdgriffith$elm_style_animation$Animation$set(
+				{
+					ctor: '::',
+					_0: _mdgriffith$elm_style_animation$Animation$opacity(0),
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		}
+	});
+var _moarwick$elm_webpack_starter$AnimationHelper$projectBigSize = _mdgriffith$elm_style_animation$Animation$interrupt(
+	{
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$set(
+			{
+				ctor: '::',
+				_0: _mdgriffith$elm_style_animation$Animation$opacity(1),
+				_1: {ctor: '[]'}
+			}),
+		_1: {
+			ctor: '::',
+			_0: _mdgriffith$elm_style_animation$Animation$to(
+				{
+					ctor: '::',
+					_0: _mdgriffith$elm_style_animation$Animation$width(
+						_mdgriffith$elm_style_animation$Animation$rem(44.0)),
+					_1: {
+						ctor: '::',
+						_0: _mdgriffith$elm_style_animation$Animation$height(
+							_mdgriffith$elm_style_animation$Animation$rem(33.0)),
+						_1: {
+							ctor: '::',
+							_0: _mdgriffith$elm_style_animation$Animation$marginLeft(
+								_mdgriffith$elm_style_animation$Animation$rem(0)),
+							_1: {
+								ctor: '::',
+								_0: _mdgriffith$elm_style_animation$Animation$marginRight(
+									_mdgriffith$elm_style_animation$Animation$rem(0)),
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				}),
+			_1: {
+				ctor: '::',
+				_0: _mdgriffith$elm_style_animation$Animation_Messenger$send(_moarwick$elm_webpack_starter$Components_UpdateMessages$BringOutText),
+				_1: {ctor: '[]'}
+			}
+		}
+	});
+var _moarwick$elm_webpack_starter$AnimationHelper$initStyleProperties = {
+	ctor: '::',
+	_0: _mdgriffith$elm_style_animation$Animation$width(
+		_mdgriffith$elm_style_animation$Animation$rem(22.0)),
+	_1: {
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$height(
+			_mdgriffith$elm_style_animation$Animation$rem(16.5)),
+		_1: {
+			ctor: '::',
+			_0: _mdgriffith$elm_style_animation$Animation$opacity(1),
+			_1: {
+				ctor: '::',
+				_0: _mdgriffith$elm_style_animation$Animation$marginLeft(
+					_mdgriffith$elm_style_animation$Animation$rem(0.5)),
+				_1: {
+					ctor: '::',
+					_0: _mdgriffith$elm_style_animation$Animation$marginRight(
+						_mdgriffith$elm_style_animation$Animation$rem(0.5)),
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	}
+};
+var _moarwick$elm_webpack_starter$AnimationHelper$projectNormalSize = _mdgriffith$elm_style_animation$Animation$interrupt(
+	{
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$set(
+			{
+				ctor: '::',
+				_0: _mdgriffith$elm_style_animation$Animation$opacity(1),
+				_1: {ctor: '[]'}
+			}),
+		_1: {
+			ctor: '::',
+			_0: _mdgriffith$elm_style_animation$Animation$to(_moarwick$elm_webpack_starter$AnimationHelper$initStyleProperties),
+			_1: {ctor: '[]'}
+		}
+	});
+var _moarwick$elm_webpack_starter$AnimationHelper$closeButtonNormal = _mdgriffith$elm_style_animation$Animation$interrupt(
+	{
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$to(
+			{
+				ctor: '::',
+				_0: _mdgriffith$elm_style_animation$Animation$width(
+					_mdgriffith$elm_style_animation$Animation$rem(3)),
+				_1: {
+					ctor: '::',
+					_0: _mdgriffith$elm_style_animation$Animation$borderWidth(
+						_mdgriffith$elm_style_animation$Animation$rem(0)),
+					_1: {ctor: '[]'}
+				}
+			}),
+		_1: {ctor: '[]'}
+	});
+var _moarwick$elm_webpack_starter$AnimationHelper$closeButtonHover = _mdgriffith$elm_style_animation$Animation$interrupt(
+	{
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$to(
+			{
+				ctor: '::',
+				_0: _mdgriffith$elm_style_animation$Animation$width(
+					_mdgriffith$elm_style_animation$Animation$rem(4)),
+				_1: {
+					ctor: '::',
+					_0: _mdgriffith$elm_style_animation$Animation$borderWidth(
+						_mdgriffith$elm_style_animation$Animation$rem(0.2)),
+					_1: {ctor: '[]'}
+				}
+			}),
+		_1: {ctor: '[]'}
+	});
+var _moarwick$elm_webpack_starter$AnimationHelper$closeButtonStyle = {
+	ctor: '::',
+	_0: _mdgriffith$elm_style_animation$Animation$width(
+		_mdgriffith$elm_style_animation$Animation$rem(0)),
+	_1: {
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$borderWidth(
+			_mdgriffith$elm_style_animation$Animation$rem(0)),
+		_1: {
+			ctor: '::',
+			_0: _mdgriffith$elm_style_animation$Animation$borderColor(
+				A3(_elm_lang$core$Color$rgb, 255, 255, 255)),
+			_1: {
+				ctor: '::',
+				_0: A2(_mdgriffith$elm_style_animation$Animation$exactly, 'border-style', 'solid'),
+				_1: {ctor: '[]'}
+			}
+		}
+	}
+};
+var _moarwick$elm_webpack_starter$AnimationHelper$closeButtonHidden = _mdgriffith$elm_style_animation$Animation$interrupt(
+	{
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$to(_moarwick$elm_webpack_starter$AnimationHelper$closeButtonStyle),
+		_1: {ctor: '[]'}
+	});
+var _moarwick$elm_webpack_starter$AnimationHelper$profileTextAppear = function (delay) {
+	return _mdgriffith$elm_style_animation$Animation$interrupt(
+		{
+			ctor: '::',
+			_0: _mdgriffith$elm_style_animation$Animation$wait(_elm_lang$core$Time$millisecond * delay),
+			_1: {
+				ctor: '::',
+				_0: _mdgriffith$elm_style_animation$Animation$set(
+					{
+						ctor: '::',
+						_0: _mdgriffith$elm_style_animation$Animation$width(
+							_mdgriffith$elm_style_animation$Animation$percent(100)),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: _mdgriffith$elm_style_animation$Animation$to(
+						{
+							ctor: '::',
+							_0: _mdgriffith$elm_style_animation$Animation$opacity(1),
+							_1: {
+								ctor: '::',
+								_0: _mdgriffith$elm_style_animation$Animation$color(
+									A4(_elm_lang$core$Color$rgba, 0, 0, 0, 1)),
+								_1: {
+									ctor: '::',
+									_0: _mdgriffith$elm_style_animation$Animation$padding(
+										_mdgriffith$elm_style_animation$Animation$rem(0.2)),
+									_1: {
+										ctor: '::',
+										_0: _mdgriffith$elm_style_animation$Animation$marginTop(
+											_mdgriffith$elm_style_animation$Animation$percent(0)),
+										_1: {
+											ctor: '::',
+											_0: _mdgriffith$elm_style_animation$Animation$marginBottom(
+												_mdgriffith$elm_style_animation$Animation$percent(0)),
+											_1: {
+												ctor: '::',
+												_0: A3(_mdgriffith$elm_style_animation$Animation$custom, 'max-height', 50, 'rem'),
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								}
+							}
+						}),
+					_1: {
+						ctor: '::',
+						_0: _mdgriffith$elm_style_animation$Animation_Messenger$send(
+							_moarwick$elm_webpack_starter$Components_UpdateMessages$ProfileAnimationDone(_moarwick$elm_webpack_starter$Components_UpdateMessages$Done)),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		});
+};
+var _moarwick$elm_webpack_starter$AnimationHelper$profilePicExpanded = _mdgriffith$elm_style_animation$Animation$interrupt(
+	{
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$to(
+			{
+				ctor: '::',
+				_0: _mdgriffith$elm_style_animation$Animation$width(
+					_mdgriffith$elm_style_animation$Animation$percent(100)),
+				_1: {
+					ctor: '::',
+					_0: _mdgriffith$elm_style_animation$Animation$borderTopLeftRadius(
+						_mdgriffith$elm_style_animation$Animation$percent(15)),
+					_1: {
+						ctor: '::',
+						_0: _mdgriffith$elm_style_animation$Animation$borderTopRightRadius(
+							_mdgriffith$elm_style_animation$Animation$percent(15)),
+						_1: {
+							ctor: '::',
+							_0: _mdgriffith$elm_style_animation$Animation$borderBottomLeftRadius(
+								_mdgriffith$elm_style_animation$Animation$percent(0)),
+							_1: {
+								ctor: '::',
+								_0: _mdgriffith$elm_style_animation$Animation$borderBottomRightRadius(
+									_mdgriffith$elm_style_animation$Animation$percent(0)),
+								_1: {
+									ctor: '::',
+									_0: _mdgriffith$elm_style_animation$Animation$borderWidth(
+										_mdgriffith$elm_style_animation$Animation$rem(0)),
+									_1: {
+										ctor: '::',
+										_0: A2(_mdgriffith$elm_style_animation$Animation$exactly, 'border-style', 'none'),
+										_1: {
+											ctor: '::',
+											_0: _mdgriffith$elm_style_animation$Animation$scale(1),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}),
+		_1: {ctor: '[]'}
+	});
+var _moarwick$elm_webpack_starter$AnimationHelper$profilePicHidden = _mdgriffith$elm_style_animation$Animation$interrupt(
+	{
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$to(
+			{
+				ctor: '::',
+				_0: _mdgriffith$elm_style_animation$Animation$width(
+					_mdgriffith$elm_style_animation$Animation$percent(0)),
+				_1: {
+					ctor: '::',
+					_0: _mdgriffith$elm_style_animation$Animation$borderTopLeftRadius(
+						_mdgriffith$elm_style_animation$Animation$percent(50)),
+					_1: {
+						ctor: '::',
+						_0: _mdgriffith$elm_style_animation$Animation$borderTopRightRadius(
+							_mdgriffith$elm_style_animation$Animation$percent(50)),
+						_1: {
+							ctor: '::',
+							_0: _mdgriffith$elm_style_animation$Animation$borderBottomLeftRadius(
+								_mdgriffith$elm_style_animation$Animation$percent(50)),
+							_1: {
+								ctor: '::',
+								_0: _mdgriffith$elm_style_animation$Animation$borderBottomRightRadius(
+									_mdgriffith$elm_style_animation$Animation$percent(50)),
+								_1: {
+									ctor: '::',
+									_0: A2(_mdgriffith$elm_style_animation$Animation$exactly, 'border-style', 'none'),
+									_1: {
+										ctor: '::',
+										_0: _mdgriffith$elm_style_animation$Animation$scale(1),
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}
+					}
+				}
+			}),
+		_1: {ctor: '[]'}
+	});
+var _moarwick$elm_webpack_starter$AnimationHelper$profilePicHover = _mdgriffith$elm_style_animation$Animation$interrupt(
+	{
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$to(
+			{
+				ctor: '::',
+				_0: _mdgriffith$elm_style_animation$Animation$scale(1),
+				_1: {ctor: '[]'}
+			}),
+		_1: {ctor: '[]'}
+	});
+var _moarwick$elm_webpack_starter$AnimationHelper$profileNormalScale = 0.975;
+var _moarwick$elm_webpack_starter$AnimationHelper$profilePicNormal = function (delay) {
+	return _mdgriffith$elm_style_animation$Animation$interrupt(
+		{
+			ctor: '::',
+			_0: _mdgriffith$elm_style_animation$Animation$wait(_elm_lang$core$Time$millisecond * delay),
+			_1: {
+				ctor: '::',
+				_0: _mdgriffith$elm_style_animation$Animation$to(
+					{
+						ctor: '::',
+						_0: _mdgriffith$elm_style_animation$Animation$width(
+							_mdgriffith$elm_style_animation$Animation$percent(100)),
+						_1: {
+							ctor: '::',
+							_0: _mdgriffith$elm_style_animation$Animation$borderTopLeftRadius(
+								_mdgriffith$elm_style_animation$Animation$percent(60)),
+							_1: {
+								ctor: '::',
+								_0: _mdgriffith$elm_style_animation$Animation$borderTopRightRadius(
+									_mdgriffith$elm_style_animation$Animation$percent(60)),
+								_1: {
+									ctor: '::',
+									_0: _mdgriffith$elm_style_animation$Animation$borderBottomLeftRadius(
+										_mdgriffith$elm_style_animation$Animation$percent(60)),
+									_1: {
+										ctor: '::',
+										_0: _mdgriffith$elm_style_animation$Animation$borderBottomRightRadius(
+											_mdgriffith$elm_style_animation$Animation$percent(60)),
+										_1: {
+											ctor: '::',
+											_0: _mdgriffith$elm_style_animation$Animation$scale(_moarwick$elm_webpack_starter$AnimationHelper$profileNormalScale),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}
+					}),
+				_1: {
+					ctor: '::',
+					_0: _mdgriffith$elm_style_animation$Animation_Messenger$send(
+						_moarwick$elm_webpack_starter$Components_UpdateMessages$ProfileAnimationDone(_moarwick$elm_webpack_starter$Components_UpdateMessages$Off)),
+					_1: {ctor: '[]'}
+				}
+			}
+		});
+};
+var _moarwick$elm_webpack_starter$AnimationHelper$profilePicNoHover = _mdgriffith$elm_style_animation$Animation$interrupt(
+	{
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$to(
+			{
+				ctor: '::',
+				_0: _mdgriffith$elm_style_animation$Animation$scale(_moarwick$elm_webpack_starter$AnimationHelper$profileNormalScale),
+				_1: {ctor: '[]'}
+			}),
+		_1: {ctor: '[]'}
+	});
+var _moarwick$elm_webpack_starter$AnimationHelper$profileMarginBottom = 0;
+var _moarwick$elm_webpack_starter$AnimationHelper$profileBorderThickness = 0.2;
+var _moarwick$elm_webpack_starter$AnimationHelper$spring = {stiffness: 600, damping: 85};
+var _moarwick$elm_webpack_starter$AnimationHelper$emptyStyle = A2(
+	_mdgriffith$elm_style_animation$Animation$styleWith,
+	_mdgriffith$elm_style_animation$Animation$spring(_moarwick$elm_webpack_starter$AnimationHelper$spring),
+	_moarwick$elm_webpack_starter$AnimationHelper$initStyleProperties);
+var _moarwick$elm_webpack_starter$AnimationHelper$startStyle = A2(
+	_mdgriffith$elm_style_animation$Animation$styleWith,
+	_mdgriffith$elm_style_animation$Animation$spring(_moarwick$elm_webpack_starter$AnimationHelper$spring),
+	_moarwick$elm_webpack_starter$AnimationHelper$initStyleProperties);
+var _moarwick$elm_webpack_starter$AnimationHelper$profilePicStartStyle = A2(
+	_mdgriffith$elm_style_animation$Animation$styleWith,
+	_mdgriffith$elm_style_animation$Animation$spring(_moarwick$elm_webpack_starter$AnimationHelper$spring),
+	{
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$width(
+			_mdgriffith$elm_style_animation$Animation$percent(100)),
+		_1: {
+			ctor: '::',
+			_0: _mdgriffith$elm_style_animation$Animation$borderTopLeftRadius(
+				_mdgriffith$elm_style_animation$Animation$percent(60)),
+			_1: {
+				ctor: '::',
+				_0: _mdgriffith$elm_style_animation$Animation$borderTopRightRadius(
+					_mdgriffith$elm_style_animation$Animation$percent(60)),
+				_1: {
+					ctor: '::',
+					_0: _mdgriffith$elm_style_animation$Animation$borderBottomLeftRadius(
+						_mdgriffith$elm_style_animation$Animation$percent(60)),
+					_1: {
+						ctor: '::',
+						_0: _mdgriffith$elm_style_animation$Animation$borderBottomRightRadius(
+							_mdgriffith$elm_style_animation$Animation$percent(60)),
+						_1: {
+							ctor: '::',
+							_0: _mdgriffith$elm_style_animation$Animation$borderWidth(
+								_mdgriffith$elm_style_animation$Animation$rem(_moarwick$elm_webpack_starter$AnimationHelper$profileBorderThickness)),
+							_1: {
+								ctor: '::',
+								_0: A2(_mdgriffith$elm_style_animation$Animation$exactly, 'border-style', 'none'),
+								_1: {
+									ctor: '::',
+									_0: _mdgriffith$elm_style_animation$Animation$borderColor(
+										A4(_elm_lang$core$Color$rgba, 255, 255, 255, 1)),
+									_1: {
+										ctor: '::',
+										_0: _mdgriffith$elm_style_animation$Animation$scale(_moarwick$elm_webpack_starter$AnimationHelper$profileNormalScale),
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	});
+var _moarwick$elm_webpack_starter$AnimationHelper$closeButtonStartStyle = A2(
+	_mdgriffith$elm_style_animation$Animation$styleWith,
+	_mdgriffith$elm_style_animation$Animation$spring(_moarwick$elm_webpack_starter$AnimationHelper$spring),
+	_moarwick$elm_webpack_starter$AnimationHelper$closeButtonStyle);
+var _moarwick$elm_webpack_starter$AnimationHelper$zIndex = function (depth) {
+	return A3(_mdgriffith$elm_style_animation$Animation$custom, 'z-index', depth, '');
+};
+var _moarwick$elm_webpack_starter$AnimationHelper$profileTextProperties = {
+	ctor: '::',
+	_0: _mdgriffith$elm_style_animation$Animation$color(
+		A4(_elm_lang$core$Color$rgba, 0, 0, 0, 0)),
+	_1: {
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$opacity(0),
+		_1: {
+			ctor: '::',
+			_0: _mdgriffith$elm_style_animation$Animation$padding(
+				_mdgriffith$elm_style_animation$Animation$rem(0)),
+			_1: {
+				ctor: '::',
+				_0: _mdgriffith$elm_style_animation$Animation$width(
+					_mdgriffith$elm_style_animation$Animation$percent(100)),
+				_1: {
+					ctor: '::',
+					_0: _mdgriffith$elm_style_animation$Animation$paddingTop(
+						_mdgriffith$elm_style_animation$Animation$rem(0.5)),
+					_1: {
+						ctor: '::',
+						_0: A3(_mdgriffith$elm_style_animation$Animation$custom, 'max-height', 0, 'rem'),
+						_1: {
+							ctor: '::',
+							_0: _moarwick$elm_webpack_starter$AnimationHelper$zIndex(-1),
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}
+		}
+	}
+};
+var _moarwick$elm_webpack_starter$AnimationHelper$profileTextFastGone = _mdgriffith$elm_style_animation$Animation$interrupt(
+	{
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$set(_moarwick$elm_webpack_starter$AnimationHelper$profileTextProperties),
+		_1: {ctor: '[]'}
+	});
+var _moarwick$elm_webpack_starter$AnimationHelper$profileTextStart = A2(
+	_mdgriffith$elm_style_animation$Animation$styleWith,
+	_mdgriffith$elm_style_animation$Animation$spring(_moarwick$elm_webpack_starter$AnimationHelper$spring),
+	_moarwick$elm_webpack_starter$AnimationHelper$profileTextProperties);
+var _moarwick$elm_webpack_starter$AnimationHelper$profileTextDisappear = _mdgriffith$elm_style_animation$Animation$interrupt(
+	{
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$to(_moarwick$elm_webpack_starter$AnimationHelper$profileTextProperties),
+		_1: {ctor: '[]'}
+	});
+var _moarwick$elm_webpack_starter$AnimationHelper$textStartStyle = A2(
+	_mdgriffith$elm_style_animation$Animation$styleWith,
+	_mdgriffith$elm_style_animation$Animation$spring(_moarwick$elm_webpack_starter$AnimationHelper$spring),
+	{
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$opacity(0.0),
+		_1: {
+			ctor: '::',
+			_0: _mdgriffith$elm_style_animation$Animation$marginTop(
+				_mdgriffith$elm_style_animation$Animation$rem(-5)),
+			_1: {
+				ctor: '::',
+				_0: _moarwick$elm_webpack_starter$AnimationHelper$zIndex(-1),
+				_1: {ctor: '[]'}
+			}
+		}
+	});
+var _moarwick$elm_webpack_starter$AnimationHelper$textToVisible = _mdgriffith$elm_style_animation$Animation$interrupt(
+	{
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$to(
+			{
+				ctor: '::',
+				_0: _mdgriffith$elm_style_animation$Animation$opacity(1.0),
+				_1: {
+					ctor: '::',
+					_0: _mdgriffith$elm_style_animation$Animation$marginTop(
+						_mdgriffith$elm_style_animation$Animation$rem(0)),
+					_1: {ctor: '[]'}
+				}
+			}),
+		_1: {
+			ctor: '::',
+			_0: _mdgriffith$elm_style_animation$Animation$set(
+				{
+					ctor: '::',
+					_0: _moarwick$elm_webpack_starter$AnimationHelper$zIndex(1),
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		}
+	});
+var _moarwick$elm_webpack_starter$AnimationHelper$textToHidden = _mdgriffith$elm_style_animation$Animation$interrupt(
+	{
+		ctor: '::',
+		_0: _mdgriffith$elm_style_animation$Animation$set(
+			{
+				ctor: '::',
+				_0: _mdgriffith$elm_style_animation$Animation$opacity(0.0),
+				_1: {
+					ctor: '::',
+					_0: _mdgriffith$elm_style_animation$Animation$marginTop(
+						_mdgriffith$elm_style_animation$Animation$rem(-5)),
+					_1: {
+						ctor: '::',
+						_0: _moarwick$elm_webpack_starter$AnimationHelper$zIndex(-1),
+						_1: {ctor: '[]'}
+					}
+				}
+			}),
+		_1: {ctor: '[]'}
+	});
+var _moarwick$elm_webpack_starter$AnimationHelper$SpringProps = F2(
+	function (a, b) {
+		return {stiffness: a, damping: b};
+	});
